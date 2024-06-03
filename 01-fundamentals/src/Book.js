@@ -1,5 +1,6 @@
+// There is no need to import react here
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author } = props
 
   return (
     <article className='book'>
@@ -8,7 +9,7 @@ const Book = (props) => {
 
       <h4>{author} </h4>
     </article>
-  );
-};
+  )
+}
 
-export default Book;
+export default Book
