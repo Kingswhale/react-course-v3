@@ -1,4 +1,4 @@
-import { pageLinks, socialLinks } from '../data'
+import { socialLinks } from '../data'
 import PageLinks from './PageLinks'
 import SocialLink from './SocialLink'
 const Footer = () => {
