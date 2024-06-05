@@ -1,11 +1,19 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const UncontrolledInputs = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0)
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
+    console.log('this is 1', [...formData])
+    console.log('this is 2', [...formData.entries()])
+    const newUser = Object.fromEntries(formData)
+    console.log('this is object', newUser)
+    setValue(value + 1)
+    e.currentTarget.reset()
+    console.log('this is the state value update', value)
+  }
   return (
     <div>
       <form className='form' onSubmit={handleSubmit}>
@@ -24,7 +32,7 @@ const UncontrolledInputs = () => {
           </label>
           <input type='email' className='form-input' id='email' name='email' />
         </div>
-        {/* email */}
+        {/* password */}
         <div className='form-row'>
           <label htmlFor='password' className='form-label'>
             Password
@@ -42,6 +50,6 @@ const UncontrolledInputs = () => {
         </button>
       </form>
     </div>
-  );
-};
-export default UncontrolledInputs;
+  )
+}
+export default UncontrolledInputs

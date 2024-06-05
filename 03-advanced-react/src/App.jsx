@@ -1,4 +1,4 @@
-import Starter from './tutorial/06-forms/starter/04-other-inputs.jsx'
+import Starter from './tutorial/07-useRef/starter/01-useRef-basics.jsx'
 import Final from './tutorial/01-useState/final/03-useState-array.jsx'
 
 const App = () => {
